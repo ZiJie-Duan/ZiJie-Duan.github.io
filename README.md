@@ -25,7 +25,7 @@ summary: One line shown on the app page.
 ```
 
 In the text, `{{owner}}`, `{{email}}` and `{{site}}` are filled in from
-`site.config.mjs`.
+`site.config.mjs` (the owner in the document's language).
 
 The page appears at `/<app>/<kind>/` (Chinese) and `/en/<app>/<kind>/`
 (English), for example `/utter/privacy/` and `/en/utter/privacy/`.

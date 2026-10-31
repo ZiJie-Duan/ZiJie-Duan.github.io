@@ -1,16 +1,17 @@
 // Everything about the site that is not a document lives here: who runs it,
 // how to reach them, and which apps it covers. Documents may use
-// {{owner}}, {{email}} and {{site}}; they are filled in at build time.
+// {{owner}}, {{email}} and {{site}}; they are filled in at build time
+// (the owner in the document's language).
 
 export const site = {
   // Where the site is published. A project repository (not <user>.github.io)
   // also needs `base` set to '/<repository>'.
   url: 'https://zijie-duan.github.io',
   base: '',
-  owner: 'ZiJie Duan',
-  // TODO: the address testers and reviewers should write to.
-  email: 'TODO-your-contact-email@example.com',
-  name: { zh: 'ZiJie Duan 的应用', en: 'Apps by ZiJie Duan' },
+  owner: { zh: '段子杰（ZiJie Duan）', en: 'ZiJie Duan (段子杰)' },
+  // The address testers and reviewers write to.
+  email: 'zijie.duan.2002@gmail.com',
+  name: { zh: '段子杰的应用', en: 'Apps by ZiJie Duan' },
   intro: {
     zh: '这里是我开发的应用的隐私政策、使用条款和测试说明。',
     en: 'Privacy policies, terms and beta guides for the apps I make.',

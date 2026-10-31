@@ -37,7 +37,7 @@ const pageTitle = title === name ? name : `${title} · ${name}`;
       <slot />
     </main>
     <footer class="bottom">
-      <span>© {new Date().getFullYear()} {site.owner}</span>
+      <span>© {new Date().getFullYear()} {site.owner[lang]}</span>
       <a href={`mailto:${site.email}`}>{t(lang).contact}</a>
     </footer>
   </body>
