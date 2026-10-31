@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#f7f5ef"/>
+<path d="M65 105H1135M65 550H1135" stroke="#d8d9ce"/>
+<text x="65" y="72" font-family="Helvetica,Arial,sans-serif" font-size="25" fill="#242822">ZiJie Duan</text>
+<text x="1135" y="70" text-anchor="end" font-family="monospace" font-size="14" letter-spacing="2" fill="#64675e">A PERSONAL STUDIO</text>
+<text x="65" y="280" font-family="Georgia,serif" font-size="94" fill="#242822">Ideas into</text>
+<text x="65" y="385" font-family="Georgia,serif" font-size="94" font-style="italic" fill="#aa4328">real things.</text>
+<text x="70" y="462" font-family="Helvetica,Arial,sans-serif" font-size="20" fill="#64675e">AI, software systems &amp; interactive hardware.</text>
+<ellipse cx="938" cy="320" rx="171" ry="69" transform="rotate(-38 938 320)" fill="none" stroke="#929a88"/>
+<ellipse cx="938" cy="320" rx="171" ry="69" transform="rotate(38 938 320)" fill="none" stroke="#b6bbab"/>
+<defs><radialGradient id="core" cx="30%" cy="25%" r="80%"><stop stop-color="#f3c69c"/><stop offset=".5" stop-color="#d57949"/><stop offset="1" stop-color="#a94624"/></radialGradient></defs>
+<circle cx="938" cy="320" r="95" fill="url(#core)"/>
+<text x="910" y="351" font-family="Georgia,serif" font-size="110" font-style="italic" fill="#fff0d9">z.</text>
+<text x="65" y="588" font-family="monospace" font-size="13" letter-spacing="1" fill="#64675e">SOFTWARE / SYSTEMS / SMALL EXPERIMENTS</text>
+<text x="1135" y="588" text-anchor="end" font-family="monospace" font-size="13" fill="#64675e">zijie-duan.github.io</text>
+</svg>
