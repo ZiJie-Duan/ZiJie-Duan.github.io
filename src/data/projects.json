@@ -1,0 +1,1111 @@
+{
+  "reviewedAt": "2026-10-31",
+  "scope": "Public repositories owned by ZiJie-Duan; includes forks, learning records and archives.",
+  "projects": [
+    {
+      "id": "easytier-ios-build",
+      "name": "EasyTier for iOS",
+      "category": "systems",
+      "stage": "ready",
+      "order": 1,
+      "summary": {
+        "zh": "把 EasyTier 的 C FFI 编译成可嵌入 iOS 的 XCFramework，包含真机与模拟器构建、Swift 接入及 Expo 模块示例。",
+        "en": "Packages EasyTier’s C FFI as an iOS XCFramework, with device and simulator builds, Swift integration, and an Expo module example."
+      },
+      "evidence": {
+        "zh": "已有 v2.6.4-4 发布，包含构建脚本、CI 和模拟器冒烟检查工作流。",
+        "en": "Published v2.6.4-4, with build scripts, CI, and a simulator smoke-check workflow."
+      },
+      "url": "https://github.com/ZiJie-Duan/easytier-ios-build",
+      "language": "Swift",
+      "updated": "2026-10-28",
+      "created": "2026-10-04",
+      "fork": false,
+      "archived": false,
+      "release": {
+        "tag_name": "v2.6.4-4",
+        "published_at": "2026-10-28T05:48:14Z",
+        "html_url": "https://github.com/ZiJie-Duan/easytier-ios-build/releases/tag/v2.6.4-4"
+      },
+      "sourceUrl": "https://github.com/ZiJie-Duan/easytier-ios-build#readme"
+    },
+    {
+      "id": "wwb_timer",
+      "name": "WWB Timer",
+      "category": "hardware",
+      "stage": "ready",
+      "order": 2,
+      "summary": {
+        "zh": "把 OLED、数码管、LED 点阵和开关组合成 ESP32-C3 交互设备。支持脱机计时、高速串口控制，以及运行同一份 C++ 逻辑的网页模拟器。",
+        "en": "An ESP32-C3 device combining an OLED, segment display, LED matrix, and switch. Includes standalone timing, a serial API, and a browser simulator sharing its C++ logic."
+      },
+      "evidence": {
+        "zh": "包含固件、Python 控制库、WebAssembly 模拟器、协议文档与实测性能记录。",
+        "en": "Includes firmware, a Python library, a WebAssembly simulator, protocol docs, and recorded benchmarks."
+      },
+      "url": "https://github.com/ZiJie-Duan/wwb_timer",
+      "language": "Python",
+      "updated": "2026-10-24",
+      "created": "2026-10-24",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/wwb_timer#readme"
+    },
+    {
+      "id": "SyncListen",
+      "name": "SyncListen",
+      "category": "ai",
+      "stage": "ready",
+      "order": 3,
+      "summary": {
+        "zh": "面向桌面的语音写作工具，把录音、流式转写、AI 整理和剪贴板串成一个工作流。保留录音与会话，并支持失败后重试。",
+        "en": "A desktop voice-writing workflow combining recording, streaming transcription, AI editing, and clipboard output. Preserves recordings and sessions, with retry support."
+      },
+      "evidence": {
+        "zh": "有安装步骤、依赖清单、完整功能说明和稳健性、流式界面测试源码。",
+        "en": "Provides setup instructions, dependencies, detailed workflows, and robustness and streaming-UI test source."
+      },
+      "url": "https://github.com/ZiJie-Duan/SyncListen",
+      "language": "Python",
+      "updated": "2026-10-08",
+      "created": "2024-08-14",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/SyncListen#readme"
+    },
+    {
+      "id": "disaster-response-australia",
+      "name": "Disaster Response Australia",
+      "category": "web",
+      "stage": "ready",
+      "order": 4,
+      "summary": {
+        "zh": "面向灾害响应场景的地图应用，提供区域标注、响应人员控制台和公众求助流程。前端使用 Next.js，并接入地图与身份服务。",
+        "en": "A map-based disaster response application with area annotation, a responder console, and a public assistance flow. Built with Next.js and external map and identity services."
+      },
+      "evidence": {
+        "zh": "子目录包含部署指南、Dockerfile、单元与端到端测试；运行需要外部 API 和后端。",
+        "en": "Includes deployment docs, a Dockerfile, unit and end-to-end tests. Requires external APIs and a backend."
+      },
+      "url": "https://github.com/ZiJie-Duan/disaster-response-australia",
+      "language": "HTML",
+      "updated": "2025-11-09",
+      "created": "2025-09-11",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/disaster-response-australia/tree/main/disaster-response-australia#readme"
+    },
+    {
+      "id": "ag-drawing-board",
+      "name": "Angel’s Pixel Board",
+      "category": "web",
+      "stage": "ready",
+      "order": 5,
+      "summary": {
+        "zh": "一个可调色的 8×8 在线像素画板，支持保存十组作品。通过 API 和版本同步，把屏幕上的像素发送到外部设备。",
+        "en": "An 8×8 pixel-art canvas with color controls and ten saved slots. An API and version-based synchronization connect the canvas to external devices."
+      },
+      "evidence": {
+        "zh": "包含 Next.js 页面、MongoDB 存储接口、设备同步接口与启动说明。",
+        "en": "Includes a Next.js interface, MongoDB storage, device-sync endpoints, and startup instructions."
+      },
+      "url": "https://github.com/ZiJie-Duan/ag-drawing-board",
+      "language": "TypeScript",
+      "updated": "2025-11-20",
+      "created": "2025-11-11",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/ag-drawing-board#readme"
+    },
+    {
+      "id": "Subtitle-Generator",
+      "name": "Subtitle Generator",
+      "category": "ai",
+      "stage": "ready",
+      "order": 6,
+      "summary": {
+        "zh": "使用 Whisper 与语言模型处理音视频，生成带时间轴的多语言、双语字幕。包含媒体处理和中断后保存已处理结果的逻辑。",
+        "en": "Uses Whisper and language models to create timestamped multilingual and bilingual subtitles, with media processing and recovery of saved progress."
+      },
+      "evidence": {
+        "zh": "有安装流程、依赖及多个发布版本；最新发布仍标注为 v1.3.1-alpha。",
+        "en": "Has installation docs, dependencies, and multiple releases. The latest is still labeled v1.3.1-alpha."
+      },
+      "url": "https://github.com/ZiJie-Duan/Subtitle-Generator",
+      "language": "Jupyter Notebook",
+      "updated": "2024-08-15",
+      "created": "2023-01-18",
+      "fork": false,
+      "archived": false,
+      "release": {
+        "tag_name": "v1.3.1-alpha",
+        "published_at": "2024-08-15T15:54:14Z",
+        "html_url": "https://github.com/ZiJie-Duan/Subtitle-Generator/releases/tag/v1.3.1-alpha"
+      },
+      "sourceUrl": "https://github.com/ZiJie-Duan/Subtitle-Generator#readme"
+    },
+    {
+      "id": "Shirai-Kuroko",
+      "name": "Shirai Kuroko",
+      "category": "tools",
+      "stage": "ready",
+      "order": 7,
+      "summary": {
+        "zh": "基于阿里云 OSS 的文件中转命令行工具。上传本地文件或转存 URL，并生成限时下载链接，也可列出和删除已上传文件。",
+        "en": "An Alibaba Cloud OSS file-transfer CLI. Upload local files or fetch a URL, generate expiring download links, and list or delete uploaded objects."
+      },
+      "evidence": {
+        "zh": "实现集中在 CLI 入口，README 给出了配置、依赖和各条命令的使用例子。",
+        "en": "A focused CLI implementation with configuration, dependencies, and command examples in the README."
+      },
+      "url": "https://github.com/ZiJie-Duan/Shirai-Kuroko",
+      "language": "Python",
+      "updated": "2026-08-06",
+      "created": "2025-12-28",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/Shirai-Kuroko#readme"
+    },
+    {
+      "id": "Ultrasonic-Suspension-Drive",
+      "name": "Ultrasonic Levitation",
+      "category": "hardware",
+      "stage": "ready",
+      "order": 8,
+      "summary": {
+        "zh": "用 STM32 产生 PWM，经驱动模块带动超声换能器，制作演示驻波的悬浮装置。仓库保留了嵌入式工程与搭建记录。",
+        "en": "A standing-wave demonstration device: an STM32 generates PWM to drive ultrasonic transducers through a driver module. Includes the embedded project and build notes."
+      },
+      "evidence": {
+        "zh": "有 Keil 工程、器件说明、搭建步骤以及装置工作照片。",
+        "en": "Contains a Keil project, component documentation, assembly instructions, and photos of the working device."
+      },
+      "url": "https://github.com/ZiJie-Duan/Ultrasonic-Suspension-Drive",
+      "language": "C",
+      "updated": "2024-05-24",
+      "created": "2022-04-24",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/Ultrasonic-Suspension-Drive#readme"
+    },
+    {
+      "id": "akiko-no-hikari",
+      "name": "Akiko-no-Hikari",
+      "category": "hardware",
+      "stage": "ready",
+      "order": 9,
+      "summary": {
+        "zh": "一个微缩城市灯光实验，使用 RP2040 和可编程 LED 模拟日出、日落与夜间光线。仓库包含模型与制作资料。",
+        "en": "A miniature city lighting experiment using an RP2040 and programmable LEDs to simulate daylight and night. Includes models and construction notes."
+      },
+      "evidence": {
+        "zh": "包含 MicroPython 程序、可打印模型和装配说明。",
+        "en": "Includes MicroPython code, printable models, and assembly instructions."
+      },
+      "url": "https://github.com/ZiJie-Duan/akiko-no-hikari",
+      "language": "Python",
+      "updated": "2026-05-10",
+      "created": "2025-11-11",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/akiko-no-hikari#readme"
+    },
+    {
+      "id": "ZiJie-Duan.github.io",
+      "name": "Personal Website",
+      "category": "web",
+      "stage": "ready",
+      "order": 10,
+      "summary": {
+        "zh": "这个个人网站的源码。使用 Astro 生成中英文页面，包含个人介绍、公开项目索引，以及应用支持与政策文档。",
+        "en": "The source for this personal website. Astro generates bilingual pages for the profile, public project directory, and app support documentation."
+      },
+      "evidence": {
+        "zh": "有静态构建流程与 GitHub Pages 自动发布工作流。",
+        "en": "Includes a static build process and automated GitHub Pages deployment."
+      },
+      "url": "https://github.com/ZiJie-Duan/ZiJie-Duan.github.io",
+      "language": "Astro",
+      "updated": "2026-10-31",
+      "created": "2026-10-31",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/ZiJie-Duan.github.io#readme"
+    },
+    {
+      "id": "Netlens",
+      "name": "NetLens",
+      "category": "systems",
+      "stage": "built",
+      "order": 11,
+      "summary": {
+        "zh": "从终端电脑的视角观察网络可达性与业务响应，汇集诊断证据。包含 Windows 采集端、Python 服务及网页看板。",
+        "en": "Observes network reachability and service response from endpoint computers. Combines a Windows collector, Python service, and web dashboard for diagnostic evidence."
+      },
+      "evidence": {
+        "zh": "0.3.1 试点版，有服务端与浏览器测试；README 明确标注 Windows 实机和现场网络验收仍待完成。",
+        "en": "Version 0.3.1 is a pilot with server and browser tests; Windows device and real-network validation remain pending per the README."
+      },
+      "url": "https://github.com/ZiJie-Duan/Netlens",
+      "language": "Python",
+      "updated": "2026-09-08",
+      "created": "2026-09-08",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/Netlens#readme"
+    },
+    {
+      "id": "kun-wu-jie",
+      "name": "Kun Wu Jie",
+      "category": "tools",
+      "stage": "built",
+      "order": 12,
+      "summary": {
+        "zh": "在 Bagel 之上构建的 Java 2D 游戏开发框架，探索坐标、精灵、事件与碰撞抽象。ShadowTaxi 是仓库中的应用实例。",
+        "en": "A Java 2D development framework built on Bagel, exploring coordinates, sprites, events, and collisions. ShadowTaxi serves as an application example."
+      },
+      "evidence": {
+        "zh": "有引擎、游戏实现与 Maven 工程；README 提醒部分文档对应旧版。",
+        "en": "Contains engine and game implementations and a Maven project; some documentation describes an older version."
+      },
+      "url": "https://github.com/ZiJie-Duan/kun-wu-jie",
+      "language": "Java",
+      "updated": "2024-12-09",
+      "created": "2024-11-28",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/kun-wu-jie#readme"
+    },
+    {
+      "id": "I-Ching",
+      "name": "I Ching",
+      "category": "tools",
+      "stage": "built",
+      "order": 13,
+      "summary": {
+        "zh": "一个围绕易经的交互小应用，包含 Python 服务、浏览器界面与容器配置，探索传统内容的数字化表达。",
+        "en": "An interactive I Ching application with a Python service, browser interface, and container setup, exploring a digital presentation of traditional content."
+      },
+      "evidence": {
+        "zh": "存在前后端实现、Docker Compose 配置及 v1.0.0-beta 发布；说明文档较少。",
+        "en": "Has frontend and backend code, Docker Compose, and a v1.0.0-beta release, with limited documentation."
+      },
+      "url": "https://github.com/ZiJie-Duan/I-Ching",
+      "language": "Python",
+      "updated": "2023-11-15",
+      "created": "2023-11-04",
+      "fork": false,
+      "archived": false,
+      "release": {
+        "tag_name": "v1.0.0-beta",
+        "published_at": "2023-11-15T02:34:38Z",
+        "html_url": "https://github.com/ZiJie-Duan/I-Ching/releases/tag/v1.0.0-beta"
+      },
+      "sourceUrl": "https://github.com/ZiJie-Duan/I-Ching#readme"
+    },
+    {
+      "id": "ASDAN_TOOLKIT",
+      "name": "ASDAN Toolkit",
+      "category": "tools",
+      "stage": "built",
+      "order": 14,
+      "summary": {
+        "zh": "为 ASDAN 商赛制作的数据辅助分析工具，围绕比赛中的运营表格与结果处理组织代码，并保留了早期 GUI 探索。",
+        "en": "Data-analysis helpers for an ASDAN business competition, organized around operational tables and results, with early GUI experiments."
+      },
+      "evidence": {
+        "zh": "有源码、依赖清单和 v1.0-beta.1 发布；属于早期比赛项目。",
+        "en": "Includes source, dependencies, and a v1.0-beta.1 release. An early competition project."
+      },
+      "url": "https://github.com/ZiJie-Duan/ASDAN_TOOLKIT",
+      "language": "Python",
+      "updated": "2021-08-02",
+      "created": "2020-11-27",
+      "fork": false,
+      "archived": false,
+      "release": {
+        "tag_name": "v1.0-beta.1",
+        "published_at": "2020-12-10T05:38:23Z",
+        "html_url": "https://github.com/ZiJie-Duan/ASDAN_TOOLKIT/releases/tag/v1.0-beta.1"
+      },
+      "sourceUrl": "https://github.com/ZiJie-Duan/ASDAN_TOOLKIT#readme"
+    },
+    {
+      "id": "Talking-like-AI",
+      "name": "Talking like AI",
+      "category": "ai",
+      "stage": "built",
+      "order": 15,
+      "summary": {
+        "zh": "通过和 AI 对话练习表达的应用探索。包含聊天前端、会话服务与分阶段提示词，希望把模型的反馈转化成自己的表达能力。",
+        "en": "An application exploring expression through AI conversation, with a chat frontend, session service, and staged prompts for practice and feedback."
+      },
+      "evidence": {
+        "zh": "已有前后端与依赖配置；根 README 很简短，尚未提供完整部署与验收说明。",
+        "en": "Frontend, backend, and dependency manifests exist; the root README lacks a complete deployment and validation guide."
+      },
+      "url": "https://github.com/ZiJie-Duan/Talking-like-AI",
+      "language": "TypeScript",
+      "updated": "2026-02-26",
+      "created": "2026-02-06",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/Talking-like-AI#readme"
+    },
+    {
+      "id": "wg-config-wizard",
+      "name": "WireGuard Config Wizard",
+      "category": "systems",
+      "stage": "built",
+      "order": 16,
+      "summary": {
+        "zh": "用配置输入生成 WireGuard 隧道配置，减少复杂网络拓扑中的重复编辑。提供生成器、命令入口和 YAML 示例。",
+        "en": "Generates WireGuard tunnel configurations from structured input to reduce repetitive work in complex network topologies. Includes a generator, CLI entry point, and YAML example."
+      },
+      "evidence": {
+        "zh": "有主程序、生成器、依赖和示例配置；使用文档目前只有简短说明。",
+        "en": "Contains a main program, generator, dependencies, and example configuration; usage documentation is brief."
+      },
+      "url": "https://github.com/ZiJie-Duan/wg-config-wizard",
+      "language": "Python",
+      "updated": "2025-12-12",
+      "created": "2025-08-31",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/wg-config-wizard#readme"
+    },
+    {
+      "id": "Ayanami-Rei-rs",
+      "name": "Ayanami Rei",
+      "category": "systems",
+      "stage": "built",
+      "order": 17,
+      "summary": {
+        "zh": "用 Rust 控制作为 HID 设备的树莓派，探索 USB Gadget 与鼠标输入。仓库同时提供设备初始化和安装脚本。",
+        "en": "A Rust client for a Raspberry Pi acting as an HID device, exploring USB Gadget and mouse input, with device initialization and installation scripts."
+      },
+      "evidence": {
+        "zh": "包含 Cargo 工程、设备控制模块和 USB Gadget 文档；整体接入说明有限。",
+        "en": "Includes a Cargo project, device-control modules, and USB Gadget docs; end-to-end setup guidance is limited."
+      },
+      "url": "https://github.com/ZiJie-Duan/Ayanami-Rei-rs",
+      "language": "Rust",
+      "updated": "2024-11-29",
+      "created": "2024-11-24",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/Ayanami-Rei-rs#readme"
+    },
+    {
+      "id": "ag-matrix",
+      "name": "AG Matrix",
+      "category": "hardware",
+      "stage": "built",
+      "order": 18,
+      "summary": {
+        "zh": "基于 ESP32 LED 点阵的小设备实验，结合颜色、文字、游戏和 Wi-Fi 交互。保存了固件与若干独立示例。",
+        "en": "Experiments with an ESP32 LED matrix, combining color, text, games, and Wi-Fi interaction. Includes firmware and standalone examples."
+      },
+      "evidence": {
+        "zh": "有显示、传感器和联网实现及示例；尚无完整的装配、部署与验证指南。",
+        "en": "Display, sensor, and networking implementations and examples exist; assembly and verification guides are limited."
+      },
+      "url": "https://github.com/ZiJie-Duan/ag-matrix",
+      "language": "C++",
+      "updated": "2025-11-21",
+      "created": "2025-11-11",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/ag-matrix#readme"
+    },
+    {
+      "id": "Whitchdog",
+      "name": "Whitchdog",
+      "category": "systems",
+      "stage": "built",
+      "order": 19,
+      "summary": {
+        "zh": "一个 Rust 动态白名单工具，用客户端、服务端和控制模块管理 iptables，另有 Kubernetes ingress 相关模块。",
+        "en": "A Rust dynamic-whitelist tool with client, server, and iptables control components, plus a Kubernetes ingress-related module."
+      },
+      "evidence": {
+        "zh": "有多个 Cargo 子项目和主程序；README 尚未说明配置与运行流程。",
+        "en": "Contains multiple Cargo subprojects and entry points; setup and operation are not documented in the README."
+      },
+      "url": "https://github.com/ZiJie-Duan/Whitchdog",
+      "language": "Rust",
+      "updated": "2024-09-14",
+      "created": "2024-08-21",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/Whitchdog#readme"
+    },
+    {
+      "id": "Nanachi",
+      "name": "Nanachi",
+      "category": "ai",
+      "stage": "built",
+      "order": 20,
+      "summary": {
+        "zh": "为 Kitty 终端探索基于语言模型的扩展交互，包含终端通信封装、模型接口，以及快速填充和完整交互两个入口。",
+        "en": "An LLM-based interaction extension for Kitty, with terminal communication wrappers, a model interface, and quick-fill and full-interaction entry points."
+      },
+      "evidence": {
+        "zh": "已有模块和执行入口，公开 README 仅说明项目用途。",
+        "en": "Modules and entry points exist; the public README only states the project purpose."
+      },
+      "url": "https://github.com/ZiJie-Duan/Nanachi",
+      "language": "Python",
+      "updated": "2025-02-18",
+      "created": "2025-01-23",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/Nanachi#readme"
+    },
+    {
+      "id": "memo_scanner",
+      "name": "Memory Scanner",
+      "category": "systems",
+      "stage": "built",
+      "order": 21,
+      "summary": {
+        "zh": "用 C 编写的进程内存扫描与编辑工具，探索类似 Cheat Engine 的地址查找与修改流程。实现拆分为扫描、命令和进程模块。",
+        "en": "A C process-memory scanning and editing tool exploring address discovery and modification, with scanner, command, and process modules."
+      },
+      "evidence": {
+        "zh": "有模块化源码与 v2.0-alpha 发布；属于早期版本，操作文档有限。",
+        "en": "Contains modular source and a v2.0-alpha release; an early version with limited operation docs."
+      },
+      "url": "https://github.com/ZiJie-Duan/memo_scanner",
+      "language": "C",
+      "updated": "2023-10-15",
+      "created": "2023-10-14",
+      "fork": false,
+      "archived": false,
+      "release": {
+        "tag_name": "v2.0-alpha",
+        "published_at": "2023-10-15T16:32:53Z",
+        "html_url": "https://github.com/ZiJie-Duan/memo_scanner/releases/tag/v2.0-alpha"
+      },
+      "sourceUrl": "https://github.com/ZiJie-Duan/memo_scanner#readme"
+    },
+    {
+      "id": "Schooling-Chill-Out-Assistant",
+      "name": "Schooling Chill-Out Assistant",
+      "category": "ai",
+      "stage": "built",
+      "order": 22,
+      "summary": {
+        "zh": "围绕学习场景制作的媒体与字幕辅助工具，包含浏览器控制、视频界面、Whisper 转写和语言模型接口。",
+        "en": "Media and subtitle helpers for study workflows, with browser control, a video interface, Whisper transcription, and a language-model interface."
+      },
+      "evidence": {
+        "zh": "包含启动脚本、依赖与各功能模块；README 未提供完整使用说明。",
+        "en": "Includes launch scripts, dependencies, and feature modules; a complete usage guide is not present."
+      },
+      "url": "https://github.com/ZiJie-Duan/Schooling-Chill-Out-Assistant",
+      "language": "Python",
+      "updated": "2023-10-10",
+      "created": "2023-07-28",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/Schooling-Chill-Out-Assistant#readme"
+    },
+    {
+      "id": "Auto_Film_Developer",
+      "name": "Auto Film Developer",
+      "category": "hardware",
+      "stage": "lab",
+      "order": 23,
+      "summary": {
+        "zh": "基于 ESP32 的小型胶片冲洗机实验。用 Arduino 程序与硬件接口组织冲洗设备控制，保留了早期实现。",
+        "en": "A small ESP32 film-development experiment using an Arduino program and hardware interface to control the device. Preserves an early implementation."
+      },
+      "evidence": {
+        "zh": "有 Arduino 主程序和硬件接口，但缺少装配、参数与验证文档。",
+        "en": "Has an Arduino program and hardware interface, but lacks assembly, configuration, and validation documentation."
+      },
+      "url": "https://github.com/ZiJie-Duan/Auto_Film_Developer",
+      "language": "C++",
+      "updated": "2023-01-12",
+      "created": "2023-01-02",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/Auto_Film_Developer#readme"
+    },
+    {
+      "id": "Tossable-Smart-Torch",
+      "name": "Tossable Smart Torch",
+      "category": "hardware",
+      "stage": "lab",
+      "order": 24,
+      "summary": {
+        "zh": "用 ESP32 和 MPU6050 感知运动并控制亮度的灯光原型，结合 MicroPython、PCB 与外壳设计，探索实体交互。",
+        "en": "A motion-controlled lighting prototype using an ESP32 and MPU6050, combining MicroPython, PCB design, and enclosure work."
+      },
+      "evidence": {
+        "zh": "源码、PCB 和照片齐全；作者明确指出缺少开关等电路问题，仍按原型呈现。",
+        "en": "Source, PCB files, and photos are present; the author documents circuit limitations including a missing switch, so it remains a prototype."
+      },
+      "url": "https://github.com/ZiJie-Duan/Tossable-Smart-Torch",
+      "language": "Python",
+      "updated": "2024-05-24",
+      "created": "2024-01-05",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/Tossable-Smart-Torch#readme"
+    },
+    {
+      "id": "Freckers-Zero",
+      "name": "Freckers Zero",
+      "category": "ai",
+      "stage": "lab",
+      "order": 25,
+      "summary": {
+        "zh": "用类 AlphaZero 架构探索双人棋盘游戏，结合神经网络、蒙特卡洛树搜索与自我对弈训练，记录训练中的尝试与局限。",
+        "en": "Explores a two-player board game through an AlphaZero-like architecture, combining neural networks, Monte Carlo tree search, and self-play training."
+      },
+      "evidence": {
+        "zh": "包含训练系统与游戏实现；README 记录过拟合和效果下降，不能据此视为成熟棋力模型。",
+        "en": "Contains training and game code; the README documents overfitting and declining performance rather than a mature playing model."
+      },
+      "url": "https://github.com/ZiJie-Duan/Freckers-Zero",
+      "language": "Jupyter Notebook",
+      "updated": "2025-06-03",
+      "created": "2025-03-19",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/Freckers-Zero#readme"
+    },
+    {
+      "id": "MTCNN_FaceLoc",
+      "name": "MTCNN Face Localization",
+      "category": "ai",
+      "stage": "lab",
+      "order": 26,
+      "summary": {
+        "zh": "围绕 MTCNN 人脸定位进行训练和推理实验，包含数据集划分、Notebook、摄像头入口和 ONNX 导出代码。",
+        "en": "Experiments with MTCNN face localization through dataset preparation, notebooks, webcam inference, and ONNX export code."
+      },
+      "evidence": {
+        "zh": "有训练与推理相关源码、模型产物；缺少完整复现步骤与评测报告。",
+        "en": "Includes training and inference code and model artifacts, but lacks complete reproduction instructions and evaluation results."
+      },
+      "url": "https://github.com/ZiJie-Duan/MTCNN_FaceLoc",
+      "language": "Jupyter Notebook",
+      "updated": "2024-04-23",
+      "created": "2024-04-02",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/MTCNN_FaceLoc#readme"
+    },
+    {
+      "id": "Dianna_System_C",
+      "name": "Dianna System",
+      "category": "hardware",
+      "stage": "lab",
+      "order": 27,
+      "summary": {
+        "zh": "一个 Arduino 微控制器小系统，包含硬件接口、屏幕驱动实验和贪吃蛇示例，尝试把多个模块组织到一起。",
+        "en": "A small Arduino microcontroller system combining hardware interfaces, display experiments, and a snake-game example."
+      },
+      "evidence": {
+        "zh": "有系统框架、外设与测试示例；集成和使用说明较少。",
+        "en": "Contains a system framework, peripherals, and test examples, with limited integration and usage documentation."
+      },
+      "url": "https://github.com/ZiJie-Duan/Dianna_System_C",
+      "language": "C++",
+      "updated": "2023-01-08",
+      "created": "2022-10-18",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/Dianna_System_C#readme"
+    },
+    {
+      "id": "AI_Toolkit",
+      "name": "AI Toolkit",
+      "category": "ai",
+      "stage": "lab",
+      "order": 28,
+      "summary": {
+        "zh": "早期 AI 工具实验合集，涵盖语音翻译、聊天界面、模型调用与客户端通信，保留不同方案的迭代代码。",
+        "en": "A collection of early AI-tool experiments covering speech translation, chat interfaces, model calls, and client communication across several iterations."
+      },
+      "evidence": {
+        "zh": "代码分布在多个实验目录，尚未形成统一安装、配置与发布流程。",
+        "en": "Code spans multiple experimental directories without a unified installation, configuration, or release process."
+      },
+      "url": "https://github.com/ZiJie-Duan/AI_Toolkit",
+      "language": "Python",
+      "updated": "2023-09-25",
+      "created": "2023-03-27",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/AI_Toolkit#readme"
+    },
+    {
+      "id": "Ouchie-Back-Timer",
+      "name": "Ouchie Back Timer",
+      "category": "tools",
+      "stage": "lab",
+      "order": 29,
+      "summary": {
+        "zh": "一个提醒长时间写代码的人起身活动的计时器设想。公开仓库目前保留项目说明，等待后续实现。",
+        "en": "An idea for a timer that reminds people to take a break during long coding sessions. The public repository currently contains the project description."
+      },
+      "evidence": {
+        "zh": "审阅时仓库只有 README 和 LICENSE，没有可运行实现。",
+        "en": "At review time the repository contains only README and LICENSE files, with no runnable implementation."
+      },
+      "url": "https://github.com/ZiJie-Duan/Ouchie-Back-Timer",
+      "language": "Other",
+      "updated": "2026-05-17",
+      "created": "2026-05-17",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/Ouchie-Back-Timer#readme"
+    },
+    {
+      "id": "belabela.github.io",
+      "name": "Lucycore Website",
+      "category": "web",
+      "stage": "built",
+      "order": 30,
+      "summary": {
+        "zh": "早期个人主页与工具说明站，保存网页内容、更新记录以及脚本使用文档，作为过去开发工作的档案。",
+        "en": "An early personal website and tool-documentation site, preserving pages, changelogs, and script documentation as a historical archive."
+      },
+      "evidence": {
+        "zh": "包含静态页面与脚本说明；GitHub 已标记归档。",
+        "en": "Contains static pages and script documentation; marked archived on GitHub."
+      },
+      "url": "https://github.com/ZiJie-Duan/belabela.github.io",
+      "language": "Shell",
+      "updated": "2020-06-08",
+      "created": "2018-06-06",
+      "fork": false,
+      "archived": true,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/belabela.github.io#readme"
+    },
+    {
+      "id": "hlby_web",
+      "name": "Haileybury Website",
+      "category": "web",
+      "stage": "built",
+      "order": 31,
+      "summary": {
+        "zh": "早期校园网站项目，围绕网页、活动内容和照片功能组织前后端代码，记录校园应用开发的探索。",
+        "en": "An early school website combining pages, activity content, and photo-related features, recording an exploration of school web applications."
+      },
+      "evidence": {
+        "zh": "包含 Python 应用、页面、API 和依赖清单；已归档，部署说明有限。",
+        "en": "Contains a Python app, pages, APIs, and dependencies; archived, with limited deployment guidance."
+      },
+      "url": "https://github.com/ZiJie-Duan/hlby_web",
+      "language": "CSS",
+      "updated": "2019-10-05",
+      "created": "2019-08-30",
+      "fork": false,
+      "archived": true,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/hlby_web#readme"
+    },
+    {
+      "id": "hlby_web_old",
+      "name": "Haileybury Web · Early",
+      "category": "web",
+      "stage": "built",
+      "order": 32,
+      "summary": {
+        "zh": "校园网站的早期版本，为初中部场景制作轻量 Web 应用。保留 Python 服务、页面模板与照片墙相关资料。",
+        "en": "An earlier lightweight school web application for junior-school use, preserving a Python service, templates, and photo-wall materials."
+      },
+      "evidence": {
+        "zh": "有应用源码、模板与依赖；仓库已归档。",
+        "en": "Application source, templates, and dependencies are present; the repository is archived."
+      },
+      "url": "https://github.com/ZiJie-Duan/hlby_web_old",
+      "language": "CSS",
+      "updated": "2019-06-09",
+      "created": "2019-03-04",
+      "fork": false,
+      "archived": true,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/hlby_web_old#readme"
+    },
+    {
+      "id": "Observer-Web",
+      "name": "Observer Web",
+      "category": "web",
+      "stage": "built",
+      "order": 33,
+      "summary": {
+        "zh": "中学生观察者联盟的早期网页开发仓库，保存页面设计、样例与辅助脚本，记录一次组织网站的搭建过程。",
+        "en": "An early website repository for a student observers’ community, preserving page designs, samples, and helper scripts."
+      },
+      "evidence": {
+        "zh": "包含网页与脚本资料，README 简短；仓库已归档。",
+        "en": "Contains web pages and scripts with a brief README; the repository is archived."
+      },
+      "url": "https://github.com/ZiJie-Duan/Observer-Web",
+      "language": "HTML",
+      "updated": "2020-07-01",
+      "created": "2020-04-30",
+      "fork": false,
+      "archived": true,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/Observer-Web#readme"
+    },
+    {
+      "id": "lcv2",
+      "name": "LCV2",
+      "category": "systems",
+      "stage": "built",
+      "order": 34,
+      "summary": {
+        "zh": "早期网络客户端与辅助工具项目，保留客户端、服务端和多轮迭代实现，作为网络编程探索的历史记录。",
+        "en": "An early network-client and utility project preserving client, server, and iterative implementations as a history of networking experiments."
+      },
+      "evidence": {
+        "zh": "有多个历史发布版本，最近为 lcv2_V7.1；仓库已归档。",
+        "en": "Has multiple historical releases, most recently lcv2_V7.1; the repository is archived."
+      },
+      "url": "https://github.com/ZiJie-Duan/lcv2",
+      "language": "Python",
+      "updated": "2021-02-25",
+      "created": "2018-06-10",
+      "fork": false,
+      "archived": true,
+      "release": {
+        "tag_name": "lcv2_V7.1",
+        "published_at": "2020-03-13T23:23:10Z",
+        "html_url": "https://github.com/ZiJie-Duan/lcv2/releases/tag/lcv2_V7.1"
+      },
+      "sourceUrl": "https://github.com/ZiJie-Duan/lcv2#readme"
+    },
+    {
+      "id": "V2ray_old",
+      "name": "V2Ray · Early Client",
+      "category": "systems",
+      "stage": "built",
+      "order": 35,
+      "summary": {
+        "zh": "早期桌面网络客户端项目，以 Python 封装相关组件，保留不同平台的启动和管理代码。",
+        "en": "An early desktop networking client wrapping related components in Python, with platform-specific launch and management code."
+      },
+      "evidence": {
+        "zh": "包含客户端代码与历史打包文件；仓库已归档，使用文档有限。",
+        "en": "Contains client code and historical packages; archived, with limited usage documentation."
+      },
+      "url": "https://github.com/ZiJie-Duan/V2ray_old",
+      "language": "Python",
+      "updated": "2018-06-09",
+      "created": "2018-02-06",
+      "fork": false,
+      "archived": true,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/V2ray_old#readme"
+    },
+    {
+      "id": "AI_GOGOGO",
+      "name": "AI Learning Lab",
+      "category": "learning",
+      "stage": "notes",
+      "order": 36,
+      "summary": {
+        "zh": "机器学习学习与实验记录，涵盖 Keras、PyTorch、分类、人脸定位和运动传感器数据分析，主要以 Notebook 和脚本组织。",
+        "en": "Machine-learning notes and experiments covering Keras, PyTorch, classification, face localization, and motion-sensor analysis through notebooks and scripts."
+      },
+      "evidence": {
+        "zh": "目录与 Notebook 显示为多主题学习资料，不按单一应用的完成度评估。",
+        "en": "The directory and notebooks form multi-topic learning material, not a single application."
+      },
+      "url": "https://github.com/ZiJie-Duan/AI_GOGOGO",
+      "language": "Jupyter Notebook",
+      "updated": "2024-08-06",
+      "created": "2023-07-25",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/AI_GOGOGO#readme"
+    },
+    {
+      "id": "DRL-note",
+      "name": "Deep RL Notes",
+      "category": "learning",
+      "stage": "notes",
+      "order": 37,
+      "summary": {
+        "zh": "深度强化学习笔记与小游戏实验，围绕智能体、游戏环境、自我对弈和模拟器积累实现与观察。",
+        "en": "Deep reinforcement-learning notes and small-game experiments covering agents, environments, self-play, and simulation."
+      },
+      "evidence": {
+        "zh": "包含多组游戏与智能体脚本，属于持续积累的学习记录。",
+        "en": "Contains several game and agent scripts, organized as learning records."
+      },
+      "url": "https://github.com/ZiJie-Duan/DRL-note",
+      "language": "Python",
+      "updated": "2025-05-14",
+      "created": "2025-03-02",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/DRL-note#readme"
+    },
+    {
+      "id": "Rust-Note",
+      "name": "Rust Notes",
+      "category": "learning",
+      "stage": "notes",
+      "order": 38,
+      "summary": {
+        "zh": "Rust 学习仓库，收集命令行、GUI、所有权与设计模式等练习。多个独立 Cargo 工程对应不同主题。",
+        "en": "Rust learning projects covering command-line tools, GUIs, ownership, and design patterns, organized as separate Cargo projects."
+      },
+      "evidence": {
+        "zh": "包含独立练习工程；属于学习资料，不作成品软件评价。",
+        "en": "Contains independent exercises; treated as learning material rather than a finished product."
+      },
+      "url": "https://github.com/ZiJie-Duan/Rust-Note",
+      "language": "Rust",
+      "updated": "2024-12-09",
+      "created": "2024-03-12",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/Rust-Note#readme"
+    },
+    {
+      "id": "arduino-note",
+      "name": "Arduino Notes",
+      "category": "learning",
+      "stage": "notes",
+      "order": 39,
+      "summary": {
+        "zh": "Arduino 与 ESP32 学习源码，覆盖屏幕、舵机、串口和其他外设实验，把硬件尝试保存成可以回看的记录。",
+        "en": "Arduino and ESP32 learning code covering displays, servos, serial communication, and other peripheral experiments."
+      },
+      "evidence": {
+        "zh": "仓库以器件和实验分类，属于硬件学习笔记。",
+        "en": "Organized by components and experiments; a hardware-learning notebook."
+      },
+      "url": "https://github.com/ZiJie-Duan/arduino-note",
+      "language": "HTML",
+      "updated": "2025-08-31",
+      "created": "2019-06-07",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/arduino-note#readme"
+    },
+    {
+      "id": "C_learning_notes",
+      "name": "C Notes",
+      "category": "learning",
+      "stage": "notes",
+      "order": 40,
+      "summary": {
+        "zh": "按主题整理的 C 语言练习，涉及控制流、输入输出、指针、结构体与一些工具实验，保留从基础到进阶的学习过程。",
+        "en": "C exercises organized by topic, including control flow, I/O, pointers, structures, and utility experiments from basic to more advanced material."
+      },
+      "evidence": {
+        "zh": "主要由章节练习与示例程序组成。",
+        "en": "Primarily chapter-based exercises and example programs."
+      },
+      "url": "https://github.com/ZiJie-Duan/C_learning_notes",
+      "language": "C",
+      "updated": "2024-04-02",
+      "created": "2022-07-05",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/C_learning_notes#readme"
+    },
+    {
+      "id": "python",
+      "name": "Python Notes",
+      "category": "learning",
+      "stage": "notes",
+      "order": 41,
+      "summary": {
+        "zh": "从早期 Python 基础到 GUI、装饰器、闭包和语音处理的学习记录，汇集小程序与不同阶段的实践。",
+        "en": "Python learning records ranging from early basics to GUIs, decorators, closures, and speech processing, with small programs from different stages."
+      },
+      "evidence": {
+        "zh": "按学习主题保存脚本和练习，不是统一发布的工具。",
+        "en": "Scripts and exercises are grouped by learning topic rather than distributed as one tool."
+      },
+      "url": "https://github.com/ZiJie-Duan/python",
+      "language": "Python",
+      "updated": "2023-04-11",
+      "created": "2018-01-17",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/python#readme"
+    },
+    {
+      "id": "JavaNote",
+      "name": "Java Notes",
+      "category": "learning",
+      "stage": "notes",
+      "order": 42,
+      "summary": {
+        "zh": "Java 入门学习笔记与小程序，记录输入输出、简单计算和基础语法练习。",
+        "en": "Introductory Java notes and small programs exploring input/output, simple calculations, and basic syntax."
+      },
+      "evidence": {
+        "zh": "包含分章节的小型 Java 示例。",
+        "en": "Contains small Java examples organized by chapter."
+      },
+      "url": "https://github.com/ZiJie-Duan/JavaNote",
+      "language": "Java",
+      "updated": "2020-02-27",
+      "created": "2020-02-26",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/JavaNote#readme"
+    },
+    {
+      "id": "go",
+      "name": "Go Notes",
+      "category": "learning",
+      "stage": "notes",
+      "order": 43,
+      "summary": {
+        "zh": "Go 语言学习与网络编程实验，包含基础练习、下载程序、SOCKS 通信和客户端相关代码。",
+        "en": "Go language and network-programming experiments covering basic exercises, downloads, SOCKS communication, and client-related code."
+      },
+      "evidence": {
+        "zh": "以练习和实验目录为主，属于学习记录。",
+        "en": "Primarily exercises and experimental directories; treated as learning records."
+      },
+      "url": "https://github.com/ZiJie-Duan/go",
+      "language": "Go",
+      "updated": "2019-05-08",
+      "created": "2019-04-02",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/go#readme"
+    },
+    {
+      "id": "ZiJie-Duan",
+      "name": "GitHub Profile",
+      "category": "web",
+      "stage": "notes",
+      "order": 44,
+      "summary": {
+        "zh": "GitHub 个人资料页的 README 仓库，用来呈现账号介绍与个人表达，也是公开开发记录的入口。",
+        "en": "The README repository for the GitHub profile, presenting a short personal introduction and linking into the public development record."
+      },
+      "evidence": {
+        "zh": "只有个人资料 README，属于内容仓库。",
+        "en": "Contains a profile README; a content repository rather than an application."
+      },
+      "url": "https://github.com/ZiJie-Duan/ZiJie-Duan",
+      "language": "Other",
+      "updated": "2025-11-12",
+      "created": "2024-08-14",
+      "fork": false,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/ZiJie-Duan#readme"
+    },
+    {
+      "id": "claw-code",
+      "name": "Claw Code · Fork",
+      "category": "ai",
+      "stage": "fork",
+      "order": 45,
+      "summary": {
+        "zh": "保存的 Claw Code 上游派生仓库，内容涉及编程智能体的运行框架。这里作为关注与研究记录展示。",
+        "en": "A fork of upstream Claw Code, covering coding-agent harness work. Listed here as a reference and exploration record."
+      },
+      "evidence": {
+        "zh": "GitHub 标记为 Fork；上游功能和热度不计作个人原创成果。",
+        "en": "Marked as a fork by GitHub; upstream features and popularity are not attributed as original work."
+      },
+      "url": "https://github.com/ZiJie-Duan/claw-code",
+      "language": "Other",
+      "updated": "2026-04-01",
+      "created": "2026-04-01",
+      "fork": true,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/claw-code#readme"
+    },
+    {
+      "id": "WeChatMsg",
+      "name": "WeChatMsg · Fork",
+      "category": "tools",
+      "stage": "fork",
+      "order": 46,
+      "summary": {
+        "zh": "保存的微信聊天记录导出与分析工具分支，涉及聊天归档、报告和相关探索，保留其上游项目身份。",
+        "en": "A fork of a WeChat conversation export and analysis tool, covering archiving, reports, and related exploration while retaining upstream attribution."
+      },
+      "evidence": {
+        "zh": "GitHub 标记为 Fork；独立于原创项目评估。",
+        "en": "Marked as a fork by GitHub and assessed separately from original projects."
+      },
+      "url": "https://github.com/ZiJie-Duan/WeChatMsg",
+      "language": "Other",
+      "updated": "2024-11-26",
+      "created": "2024-12-31",
+      "fork": true,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/WeChatMsg#readme"
+    },
+    {
+      "id": "ncmDumper",
+      "name": "NCM Dumper · Fork",
+      "category": "tools",
+      "stage": "fork",
+      "order": 47,
+      "summary": {
+        "zh": "保存的 NCM 音频格式转换工具分支，提供批量处理脚本和使用说明，作为工具研究记录收录。",
+        "en": "A fork of an NCM audio-format conversion utility, with a batch-processing script and usage instructions, retained as a tool reference."
+      },
+      "evidence": {
+        "zh": "GitHub 标记为 Fork；仓库包含脚本与 README。",
+        "en": "Marked as a fork by GitHub; contains a script and README."
+      },
+      "url": "https://github.com/ZiJie-Duan/ncmDumper",
+      "language": "Other",
+      "updated": "2022-06-24",
+      "created": "2023-02-01",
+      "fork": true,
+      "archived": false,
+      "release": null,
+      "sourceUrl": "https://github.com/ZiJie-Duan/ncmDumper#readme"
+    }
+  ]
+}

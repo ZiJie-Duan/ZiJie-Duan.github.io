@@ -11,10 +11,10 @@ export const site = {
   owner: { zh: "段子杰（ZiJie Duan）", en: "ZiJie Duan (段子杰)" },
   // The address testers and reviewers write to.
   email: "zijie.duan.2002@gmail.com",
-  name: { zh: "段子杰 · 个人工作室", en: "ZiJie Duan · Personal Studio" },
+  name: { zh: "段子杰 · 开发与探索", en: "ZiJie Duan · Code & Exploration" },
   intro: {
-    zh: "段子杰的个人工作室。探索 AI、软件系统与交互硬件，把想法做成日常可用的工具。",
-    en: "The personal studio of ZiJie Duan. Exploring AI, software systems, and interactive hardware. Turning ideas into everyday tools.",
+    zh: "段子杰的个人主页。探索 AI、软件系统与交互硬件，完整记录公开项目、工具与学习实验。",
+    en: "ZiJie Duan’s personal website. Explore public projects, tools, and learning experiments across AI, software systems, and interactive hardware.",
   },
 };
 

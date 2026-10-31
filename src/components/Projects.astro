@@ -1,0 +1,351 @@
+---
+import Base from "../layouts/Base.astro";
+import Icon from "./Icon.astro";
+import { href, type Lang } from "../lib";
+import {
+  projects,
+  categories,
+  stages,
+  languages,
+  reviewedAt,
+  categoryName,
+  stageName,
+} from "../data/projects";
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const zh = lang === "zh";
+const t = (cn: string, en: string) => (zh ? cn : en);
+---
+
+<Base
+  lang={lang}
+  directory
+  title={t("项目总览", "Project directory")}
+  description={t(
+    "完整浏览段子杰的公开项目，按领域、语言与成熟度探索工具、系统、硬件和学习记录。",
+    "Explore ZiJie Duan’s public repositories by field, language, and maturity: tools, systems, hardware, and learning records.",
+  )}
+  alternate={href(zh ? "en" : "zh", "projects")}
+>
+  <section class="projects-intro">
+    <div>
+      <a class="back-link" href={href(lang)}>
+        ← {t("个人主页", "Back home")}
+      </a>
+      <h1>
+        {t("项目总览", "Project directory")}
+        <span>{String(projects.length).padStart(2, "0")}</span>
+      </h1>
+      <p>
+        {t(
+          "应用、工具、实验，以及一路留下的学习记录。",
+          "Applications, tools, experiments, and the things learned along the way.",
+        )}
+      </p>
+      <p class="projects-subtitle">
+        {t(
+          "完整收录个人账号的公开仓库，默认按实现与文档完备度排列。",
+          "All public repositories from my personal account, ordered by implementation and documentation maturity.",
+        )}
+      </p>
+    </div>
+    <div class="directory-summary">
+      <span>{t("公开代码快照", "PUBLIC CODE SNAPSHOT")}</span>
+      <strong>
+        2018 <i>—</i> 2026
+      </strong>
+      <span>
+        {t("整理于", "Reviewed")} {reviewedAt}
+        <br />
+        {projects.filter((p) => !p.fork).length}{" "}
+        {t("个非 Fork 仓库", "non-fork repos")} /{" "}
+        {projects.filter((p) => p.fork).length} Forks
+      </span>
+    </div>
+  </section>
+  <div class="project-browser">
+    <aside class="project-sidebar">
+      <div class="project-filters" hidden>
+        <h2>{t("探索领域", "Explore by field")}</h2>
+        <div
+          class="category-filter"
+          role="group"
+          aria-label={t("项目领域", "Project field")}
+        >
+          <button type="button" data-category="all" aria-pressed="true">
+            <Icon name="grid" size={17} />
+            <span>{t("所有项目", "All projects")}</span>
+            <span>{projects.length}</span>
+          </button>
+          {Object.entries(categories).map(([key, c]) => (
+            <button type="button" data-category={key} aria-pressed="false">
+              <Icon name={c.icon} size={17} />
+              <span>{c[lang]}</span>
+              <span>{projects.filter((p) => p.category === key).length}</span>
+            </button>
+          ))}
+        </div>
+        <label class="sidebar-select">
+          {t("仓库类型", "Repository type")}
+          <select id="type-filter">
+            <option value="all">{t("全部类型", "All types")}</option>
+            <option value="original">
+              {t("非 Fork 仓库", "Non-fork repositories")}
+            </option>
+            <option value="fork">Forks</option>
+            <option value="archived">{t("已归档", "Archived")}</option>
+          </select>
+        </label>
+      </div>
+      <details class="ranking-note">
+        <summary>{t("如何理解阶段？", "What do the stages mean?")}</summary>
+        <div>
+          <p>
+            {t(
+              "依据 README、源码结构和发布记录进行人工整理，不代表逐项运行验收。",
+              "An editorial review of READMEs, source structure, and releases, not a runtime verification of every project.",
+            )}
+          </p>
+          <ul>
+            <li>
+              <strong>{t("可上手", "Documented workflow")}</strong>
+              {t(
+                "有核心实现与较清楚的使用或制作说明。",
+                "Core implementation and clear usage or assembly instructions.",
+              )}
+            </li>
+            <li>
+              <strong>{t("主体已实现", "Core implemented")}</strong>
+              {t(
+                "已有主要功能，文档或验证仍有缺口。",
+                "Main functionality exists; documentation or validation has gaps.",
+              )}
+            </li>
+            <li>
+              <strong>{t("实验阶段", "Experimental")}</strong>
+              {t(
+                "原型、研究、已知限制或尚待实现的设想。",
+                "Prototypes, research, known limitations, or concepts awaiting implementation.",
+              )}
+            </li>
+            <li>
+              <strong>
+                {t("资料记录 / Fork", "Learning & content / Fork")}
+              </strong>
+              {t(
+                "独立标注，不与成品应用混为一谈。",
+                "Identified separately from finished applications.",
+              )}
+            </li>
+          </ul>
+          <p>
+            {t(
+              "同档依据功能范围、文档与验证证据排序；是否归档单独标注。每项都可展开查看依据。",
+              "Within a stage, projects are ordered by functional scope, documentation, and validation evidence. Archive status is separate. Expand any entry for its rationale.",
+            )}
+          </p>
+        </div>
+      </details>
+      <a
+        class="sidebar-github"
+        href="https://github.com/ZiJie-Duan?tab=repositories"
+      >
+        GitHub <Icon name="external" size={14} />
+      </a>
+    </aside>
+    <section
+      class="project-results"
+      aria-label={t("项目列表", "Project results")}
+    >
+      <div class="browser-controls" hidden>
+        <div class="browser-search">
+          <Icon name="search" size={19} />
+          <label class="sr-only" for="project-search">
+            {t("搜索项目", "Search projects")}
+          </label>
+          <input
+            id="project-search"
+            type="search"
+            placeholder={t(
+              "名称、功能、技术关键词…",
+              "Name, purpose, technology…",
+            )}
+            autocomplete="off"
+          />
+          <kbd>/</kbd>
+        </div>
+        <div class="browser-toolbar">
+          <div class="select-filters">
+            <label class="sr-only" for="stage-filter">
+              {t("项目阶段", "Project stage")}
+            </label>
+            <select id="stage-filter">
+              <option value="all">{t("所有阶段", "All stages")}</option>
+              {Object.entries(stages).map(([key, s]) => (
+                <option value={key}>{s[lang]}</option>
+              ))}
+            </select>
+            <label class="sr-only" for="language-filter">
+              {t("主要语言", "Primary language")}
+            </label>
+            <select id="language-filter">
+              <option value="all">{t("所有语言", "All languages")}</option>
+              {languages.map((l) => (
+                <option value={l}>{l}</option>
+              ))}
+            </select>
+          </div>
+          <div class="sort-controls">
+            <label class="sr-only" for="project-sort">
+              {t("排序方式", "Sort order")}
+            </label>
+            <select id="project-sort">
+              <option value="maturity">
+                {t("成熟度优先", "Maturity first")}
+              </option>
+              <option value="updated">
+                {t("最近更新", "Recently updated")}
+              </option>
+              <option value="name">{t("名称 A–Z", "Name A–Z")}</option>
+            </select>
+            <div
+              class="view-controls"
+              role="group"
+              aria-label={t("展示方式", "View layout")}
+            >
+              <button
+                type="button"
+                data-view="list"
+                aria-pressed="true"
+                aria-label={t("列表视图", "List view")}
+              >
+                <Icon name="list" size={17} />
+              </button>
+              <button
+                type="button"
+                data-view="grid"
+                aria-pressed="false"
+                aria-label={t("卡片视图", "Grid view")}
+              >
+                <Icon name="grid" size={16} />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="result-heading">
+        <p id="result-count" role="status" aria-live="polite">
+          {t(
+            `显示全部 ${projects.length} 个项目`,
+            `Showing all ${projects.length} projects`,
+          )}
+        </p>
+        <button type="button" class="clear-filters" hidden>
+          {t("清除筛选", "Clear filters")}
+          <Icon name="x" size={13} />
+        </button>
+      </div>
+      <noscript>
+        <p class="nojs-note">
+          {t(
+            "以下已完整列出所有项目；启用 JavaScript 可使用搜索与筛选。",
+            "All projects are listed below. Enable JavaScript to search and filter.",
+          )}
+        </p>
+      </noscript>
+      <div class="project-collection" data-layout="list">
+        {projects.map((p) => (
+          <article
+            class="repo-card"
+            id={`project-${p.id}`}
+            data-id={p.id}
+            tabindex="-1"
+          >
+            <div class="repo-header">
+              <span class={`repo-icon category-${p.category}`}>
+                <Icon
+                  name={categories[p.category as keyof typeof categories].icon}
+                />
+              </span>
+              <div class="repo-title">
+                <h2>
+                  <a href={p.url}>
+                    {p.name}
+                    <Icon name="external" size={15} />
+                  </a>
+                </h2>
+                <span class="repo-slug">{p.id}</span>
+              </div>
+              <span class={`stage-badge stage-${p.stage}`}>
+                {stageName(p.stage, lang)}
+              </span>
+            </div>
+            <p class="repo-description">{p.summary[lang]}</p>
+            <div class="repo-meta">
+              <span class="repo-category">
+                {categoryName(p.category, lang)}
+              </span>
+              <span>
+                <i class="language-dot"></i>
+                {p.language}
+              </span>
+              {p.archived && (
+                <span class="archive-badge">{t("已归档", "Archived")}</span>
+              )}
+              <span class="repo-date">
+                {t("更新", "Updated")}{" "}
+                <time datetime={p.updated}>{p.updated}</time>
+              </span>
+            </div>
+            <details class="repo-detail">
+              <summary>
+                {t("阶段依据", "Assessment notes")}
+                <Icon name="down" size={14} />
+              </summary>
+              <div>
+                <p>{p.evidence[lang]}</p>
+                <div class="evidence-links">
+                  <a href={p.sourceUrl}>
+                    {t("查看仓库资料", "Repository documentation")}
+                    <Icon name="external" size={13} />
+                  </a>
+                  {p.release && (
+                    <a href={p.release.html_url}>
+                      {p.release.tag_name}
+                      <Icon name="external" size={13} />
+                    </a>
+                  )}
+                </div>
+              </div>
+            </details>
+          </article>
+        ))}
+      </div>
+      <div class="empty-state" hidden>
+        <Icon name="search" size={30} />
+        <h2>{t("暂时没有匹配的项目", "No matching projects")}</h2>
+        <p>
+          {t(
+            "换个关键词，或清除筛选看看全部项目。",
+            "Try another keyword, or clear the filters to see everything.",
+          )}
+        </p>
+        <button type="button" class="secondary-button" data-reset>
+          {t("查看全部项目", "Show all projects")}
+        </button>
+      </div>
+      <div class="results-footer">
+        <span>
+          {t(
+            "所有简介与阶段均基于公开资料整理。",
+            "Descriptions and assessments are based on public materials.",
+          )}
+        </span>
+        <a href="#main">{t("返回顶部", "Back to top")} ↑</a>
+      </div>
+    </section>
+  </div>
+</Base>
+<script src="../scripts/projects.ts"></script>

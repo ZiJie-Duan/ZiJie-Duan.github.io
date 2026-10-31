@@ -1,96 +1,193 @@
 ---
 import "../styles/site.css";
-import "../styles/studio.css";
+import "../styles/modern.css";
+import Icon from "../components/Icon.astro";
 import { site } from "../../site.config.mjs";
 import { href, t, type Lang } from "../lib";
-
 interface Props {
   lang: Lang;
   title: string;
   description?: string;
-  /** The same page in the other language. */
   alternate: string;
   home?: boolean;
+  directory?: boolean;
 }
-
-const { lang, title, description, alternate, home = false } = Astro.props;
-const other: Lang = lang === "zh" ? "en" : "zh";
-const name = site.name[lang];
-const pageTitle = title === name ? name : `${title} · ${name}`;
+const {
+  lang,
+  title,
+  description,
+  alternate,
+  home = false,
+  directory = false,
+} = Astro.props;
+const zh = lang === "zh";
+const pageTitle =
+  title === site.name[lang] ? title : `${title} · ${site.name[lang]}`;
 ---
 
 <!doctype html>
-<html lang={lang === "zh" ? "zh-Hans" : "en"}>
+<html lang={zh ? "zh-Hans" : "en"}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="light" />
+    <meta name="color-scheme" content="light dark" />
+    <script is:inline>
+      try {
+        const saved = localStorage.getItem("zijie-theme");
+        document.documentElement.dataset.theme =
+          saved === "dark" || saved === "light"
+            ? saved
+            : matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+      } catch {
+        document.documentElement.dataset.theme = matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches
+          ? "dark"
+          : "light";
+      }
+    </script>
     <title>{pageTitle}</title>
-    {description && <meta name="description" content={description} />}
+    <meta name="description" content={description ?? site.intro[lang]} />
     <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link
+      rel="alternate"
+      hreflang={zh ? "en" : "zh-Hans"}
+      href={new URL(alternate, Astro.site)}
+    />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description ?? site.intro[lang]} />
     <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
     <meta property="og:image" content={new URL("social.png", Astro.site)} />
     <meta name="twitter:card" content="summary_large_image" />
-    <link
-      rel="alternate"
-      hreflang={other === "zh" ? "zh-Hans" : "en"}
-      href={new URL(alternate, Astro.site)}
-    />
-    <link rel="icon" href={href("zh") + "favicon.svg"} type="image/svg+xml" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
-  <body class:list={[{ "studio-home": home }]}>
+  <body
+    class:list={[{ "modern-home": home, "modern-directory": directory }]}
+    data-lang={lang}
+  >
     <a class="skip-link" href="#main">
-      {lang === "zh" ? "跳到正文" : "Skip to content"}
+      {zh ? "跳到正文" : "Skip to content"}
     </a>
     <header class="top">
       <a
         class="brand"
         href={href(lang)}
-        aria-label={lang === "zh" ? "段子杰，首页" : "ZiJie Duan, home"}
+        aria-label={zh ? "段子杰，首页" : "ZiJie Duan, home"}
       >
         <span class="brand-mark" aria-hidden="true">
-          z.
+          <i></i>
+          <i></i>
+          <i></i>
         </span>
-        <span>
-          ZiJie Duan
-          <span class="brand-sub">
-            {lang === "zh" ? "段子杰 / 个人工作室" : "A PERSONAL STUDIO"}
-          </span>
-        </span>
+        ZiJie Duan<span class="brand-divider">/</span>
+        <span class="brand-note">{zh ? "段子杰" : "Personal"}</span>
       </a>
-      <nav
-        class="site-nav"
-        aria-label={lang === "zh" ? "主导航" : "Main navigation"}
-      >
-        <a href={`${href(lang)}#work`}>{lang === "zh" ? "作品" : "Work"}</a>
-        <a href={`${href(lang)}#about`}>{lang === "zh" ? "关于" : "About"}</a>
+      <nav class="site-nav" aria-label={zh ? "主导航" : "Main navigation"}>
+        <a href={href(lang)} aria-current={home ? "page" : undefined}>
+          {zh ? "首页" : "Home"}
+        </a>
         <a
-          class="lang"
-          href={alternate}
-          hreflang={other === "zh" ? "zh-Hans" : "en"}
+          href={href(lang, "projects")}
+          aria-current={directory ? "page" : undefined}
         >
-          {t(lang).other}
-          <span aria-hidden="true"> ↗</span>
+          {zh ? "项目" : "Projects"}
+        </a>
+        <a class="about-nav" href={`${href(lang)}#about`}>
+          {zh ? "关于" : "About"}
         </a>
       </nav>
+      <div class="nav-actions">
+        <button
+          class="search-trigger"
+          data-open-search
+          hidden
+          aria-label={
+            zh
+              ? "搜索项目，快捷键 Command 或 Control 加 K"
+              : "Search projects, Command or Control K"
+          }
+        >
+          <Icon name="search" size={17} />
+          <kbd>⌘ K</kbd>
+        </button>
+        <button
+          class="icon-button theme-toggle"
+          hidden
+          aria-label={zh ? "切换深浅色" : "Toggle color theme"}
+          aria-pressed="false"
+        >
+          <span class="theme-moon">
+            <Icon name="moon" size={18} />
+          </span>
+          <span class="theme-sun">
+            <Icon name="sun" size={18} />
+          </span>
+        </button>
+        <a class="lang" href={alternate} hreflang={zh ? "en" : "zh-Hans"}>
+          {zh ? "EN" : "中文"}
+        </a>
+      </div>
     </header>
     <main id="main">
       <slot />
     </main>
     <footer class="bottom">
       <span>
-        © {new Date().getFullYear()} {site.owner[lang]}
+        © {new Date().getFullYear()} {zh ? "段子杰" : "ZiJie Duan"}
+        <span class="footer-dot">·</span>
+        {zh ? "代码、想法与一些探索。" : "Code, ideas, and things in between."}
       </span>
       <span class="footer-links">
-        <a href={href(lang, "utter")}>
-          {lang === "zh" ? "应用与支持" : "Apps & support"}
+        <a href={href(lang, "utter")}>{zh ? "应用支持" : "App support"}</a>
+        <a href="https://github.com/ZiJie-Duan">
+          GitHub <Icon name="external" size={13} />
         </a>
-        <a href="https://github.com/ZiJie-Duan">GitHub ↗</a>
-        <a href={`mailto:${site.email}`}>{t(lang).contact} ↗</a>
+        <a href={`mailto:${site.email}`}>
+          {zh ? "联系" : "Contact"} <Icon name="external" size={13} />
+        </a>
       </span>
     </footer>
+    <dialog class="command-dialog" aria-labelledby="command-title">
+      <div class="command-head">
+        <Icon name="search" />
+        <h2 id="command-title" class="sr-only">
+          {zh ? "搜索公开项目" : "Search public projects"}
+        </h2>
+        <input
+          id="command-input"
+          type="search"
+          autocomplete="off"
+          aria-label={
+            zh
+              ? "项目名称、技术或关键词"
+              : "Project name, technology, or keyword"
+          }
+          placeholder={
+            zh
+              ? "搜索项目、技术、关键词…"
+              : "Search projects, technologies, keywords…"
+          }
+        />
+        <button
+          class="icon-button command-close"
+          aria-label={zh ? "关闭搜索" : "Close search"}
+        >
+          <Icon name="x" size={18} />
+        </button>
+      </div>
+      <div class="command-results"></div>
+      <div class="command-footer">
+        <span class="command-count" aria-live="polite"></span>
+        <span>
+          <kbd>↑</kbd>
+          <kbd>↓</kbd> {zh ? "选择" : "navigate"} <kbd>esc</kbd>{" "}
+          {zh ? "关闭" : "close"}
+        </span>
+      </div>
+    </dialog>
+    <script src="../scripts/shell.ts"></script>
   </body>
 </html>

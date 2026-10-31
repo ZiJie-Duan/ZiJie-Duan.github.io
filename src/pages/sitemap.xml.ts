@@ -7,6 +7,8 @@ export const GET: APIRoute = async () => {
   const paths = [
     href("zh"),
     href("en"),
+    href("zh", "projects"),
+    href("en", "projects"),
     ...apps.flatMap((app) => [href("zh", app.slug), href("en", app.slug)]),
     ...docs.map((doc) => {
       const p = parts(doc);
