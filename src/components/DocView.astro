@@ -1,0 +1,32 @@
+---
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { apps } from '../../site.config.mjs';
+import { formatDate, href, parts, t, type Doc, type Lang } from '../lib';
+
+interface Props {
+  doc: Doc;
+}
+const { doc } = Astro.props;
+const { lang, app: slug, kind } = parts(doc);
+const app = apps.find((a) => a.slug === slug)!;
+const labels = t(lang as Lang);
+const { Content } = await render(doc);
+---
+
+<Base lang={lang} title={`${app.name} ${doc.data.title}`} description={doc.data.summary}
+  alternate={href(lang === 'zh' ? 'en' : 'zh', slug, kind)}>
+  <nav class="crumbs">
+    <a href={href(lang)}>{labels.home}</a>
+    <span aria-hidden="true">/</span>
+    <a href={href(lang, slug)}>{app.name}</a>
+  </nav>
+  <article class="prose">
+    <h1>{doc.data.title}</h1>
+    <p class="meta">{app.name} · {labels.updated} {formatDate(doc.data.updated, lang)}</p>
+    {kind === 'beta' && (app.testflight
+      ? <p><a class="button" href={app.testflight}>{labels.joinBeta}</a></p>
+      : <p><span class="pill">{labels.betaSoon}</span></p>)}
+    <Content />
+  </article>
+</Base>

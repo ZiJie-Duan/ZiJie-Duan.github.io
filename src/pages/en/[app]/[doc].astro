@@ -1,0 +1,13 @@
+---
+import { getCollection } from 'astro:content';
+import DocView from '../../../components/DocView.astro';
+import { parts } from '../../../lib';
+
+export async function getStaticPaths() {
+  const docs = await getCollection('docs', (doc) => parts(doc).lang === 'en');
+  return docs.map((doc) => ({ params: { app: parts(doc).app, doc: parts(doc).kind }, props: { doc } }));
+}
+const { doc } = Astro.props;
+---
+
+<DocView doc={doc} />

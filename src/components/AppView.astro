@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+import { docsOf, href, parts, t, type App, type Lang } from '../lib';
+
+interface Props {
+  lang: Lang;
+  app: App;
+}
+const { lang, app } = Astro.props;
+const docs = await docsOf(lang, app.slug);
+const labels = t(lang);
+---
+
+<Base lang={lang} title={app.name} description={app.tagline[lang]} alternate={href(lang === 'zh' ? 'en' : 'zh', app.slug)}>
+  <nav class="crumbs"><a href={href(lang)}>{labels.home}</a></nav>
+  <section class="hero">
+    <h1>{app.name}</h1>
+    <p>{app.tagline[lang]}</p>
+    {app.testflight
+      ? <a class="button" href={app.testflight}>{labels.joinBeta}</a>
+      : <span class="pill">{labels.betaSoon}</span>}
+  </section>
+  <h2 class="section">{labels.documents}</h2>
+  <ul class="cards">
+    {docs.map((doc) => (
+      <li>
+        <a class="card" href={href(lang, app.slug, parts(doc).kind)}>
+          <span class="card-title">{doc.data.title}</span>
+          {doc.data.summary && <span class="card-text">{doc.data.summary}</span>}
+        </a>
+      </li>
+    ))}
+  </ul>
+</Base>

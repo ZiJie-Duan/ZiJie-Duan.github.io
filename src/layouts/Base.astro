@@ -1,0 +1,44 @@
+---
+import '../styles/site.css';
+import { site } from '../../site.config.mjs';
+import { href, t, type Lang } from '../lib';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description?: string;
+  /** The same page in the other language. */
+  alternate: string;
+}
+
+const { lang, title, description, alternate } = Astro.props;
+const other: Lang = lang === 'zh' ? 'en' : 'zh';
+const name = site.name[lang];
+const pageTitle = title === name ? name : `${title} · ${name}`;
+---
+
+<!doctype html>
+<html lang={lang === 'zh' ? 'zh-Hans' : 'en'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>{pageTitle}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="alternate" hreflang={other === 'zh' ? 'zh-Hans' : 'en'} href={new URL(alternate, Astro.site)} />
+    <link rel="icon" href={href('zh') + 'favicon.svg'} type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="top">
+      <a class="brand" href={href(lang)}>{name}</a>
+      <a class="lang" href={alternate} hreflang={other === 'zh' ? 'zh-Hans' : 'en'}>{t(lang).other}</a>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="bottom">
+      <span>© {new Date().getFullYear()} {site.owner}</span>
+      <a href={`mailto:${site.email}`}>{t(lang).contact}</a>
+    </footer>
+  </body>
+</html>

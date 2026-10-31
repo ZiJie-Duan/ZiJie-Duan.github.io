@@ -1,0 +1,11 @@
+---
+import AppView from '../../../components/AppView.astro';
+import { apps } from '../../../../site.config.mjs';
+
+export function getStaticPaths() {
+  return apps.map((app) => ({ params: { app: app.slug }, props: { app } }));
+}
+const { app } = Astro.props;
+---
+
+<AppView lang="en" app={app} />

@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import { apps, site } from '../../site.config.mjs';
+import { href, t, type Lang } from '../lib';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+---
+
+<Base lang={lang} title={site.name[lang]} description={site.intro[lang]} alternate={href(lang === 'zh' ? 'en' : 'zh')}>
+  <section class="hero">
+    <h1>{site.name[lang]}</h1>
+    <p>{site.intro[lang]}</p>
+  </section>
+  <ul class="cards">
+    {apps.map((app) => (
+      <li>
+        <a class="card" href={href(lang, app.slug)}>
+          <span class="card-title">{app.name}</span>
+          <span class="card-text">{app.tagline[lang]}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Base>
